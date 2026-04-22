@@ -1,0 +1,208 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #f1d2ff;
+    margin: 0;
+}
+.menu{
+    background-color: #b52dff;/* cor de fundo do menu */
+    text-align: right; /* coloque os itens a direita*/
+    padding: 15px 0; /* espaço interno */
+    position: fixed; /*Menu fica fixo no topo ao rolar a pagina */
+    width: 100%; /*Ocupa toda a largura*/
+    top: 0;/* fixa no topo*/
+    left: 0;
+    z-index: 10;/* Fica acima do conteúdo*/
+}
+.menu ul{ 
+    list-style: none; /* remove marcadores da lista*/
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    display: inline; /*itens lado a lado*/
+    margin: 0 15px; /*espaço entre os itens*/
+}
+.menu a{
+    color: #ffffff; /* cor do texto*/
+    text-decoration: none; /*remove sublinhado*/
+    font-weight: bold;
+} 
+/* efeito ao passar o mouse*/
+.menu a:hover{
+    text-decoration: underline;
+    color: #f1d2ff;
+    font-size: 18px;
+}
+/* -----------------SEÇÃO SOBRE-----------------*/
+.sobre {
+    background-color: #ffffff; /* fundo claro para destacar a seção*/
+padding: 80px 20px; /* espaçamento interno da seção*/
+}
+/* container principal que organiza colunas */
+.container-sobre {
+    display: flex; /* ativa o flexbox para alinhar colunas lado a lado*/
+    align-items: center; /* alinha verticalmente no centro */
+    justify-content: center; /* espaço entre imagem e texto */ 
+    gap: 40px; /* espaço entre imagem e texto */
+    flex-wrap: wrap; /* faz os elementos quebrarem linha em telas menores (responsivo) */
+}
+/* coluna do texto*/
+.sobre-texto {
+    max-width: 600px; /* limita largura do texto para melhor leitura*/
+}
+
+/* estilo do titulo principal da seção */
+.sobre-texto h2 {
+    color: rgb(152, 74, 255); /* cor azul do titulo*/
+    margin-bottom: 20px; /* espaço abaixo do titulo */
+    font-size: 2em; /* tamanho maior do texto*/
+
+}
+.sobre-texto h3 {
+    color: rgb(152, 74, 255);
+    margin-top: 30px; /* espaço acima do subtitulo */
+    margin-bottom: 20px; /* espaço abaixo do subtitulo*/
+}
+.sobre-texto h5 {
+    color: rgb(152, 74, 255);
+    font-size: 20px;
+}
+
+/* container dos cards de valores*/
+.valores {
+    display: flex; /* flexbox para alinhar os cards */
+    flex-wrap: wrap; /*quebra de linha em telas menores*/
+    gap: 20px /* espaço entre os cards*/
+}
+/* cada card de valor unhas*/
+.valor-card {
+    background-color: #f1d2ff; /* fundo branco para destaque*/
+    padding: 20px; /* espaço interno do card */
+    border-radius: 10px; /* bordas arredondadas */
+    flex: 1 1 200px; /* responsivo: ocupa espaço e se ajusta */
+    box-shadow: 0 0 8px rgba(0,0,0,0.1); /* sombra leve */
+}
+/* titulo do card*/
+.valor-card h4 {
+    color: rgb(152, 74, 255); /* azul do titulo */
+    margin-bottom: 10px; /* espaço abaixo do titulo */
+    }
+.valor-card img {
+    width: 300px; 
+}
+
+
+/* texto do card */
+.valor-card p {
+    font-size: .95em; /* tamanho da fonte um pouco menor*/
+    line-height: 1.4; /* espaçamento entre linhas para melhor leitura*/
+}
+.contato-form{
+    max-width: 600px; /* largura maxima do formulario*/
+    margin: 80px auto; /* centralizada horizontamentente e da espaço vertical*/
+    background-color: rgb(255, 255, 255); /*cor do fundo do formulario*/
+    padding: 30px; /*espaço inteiro*/
+    border-radius: 10px; /*bordinhas arredondadas*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /*alinha textos a esquerda*/
+}
+
+.contato-form h1 {
+    text-align: center;/*titulo centralizado*/
+    margin-bottom: 20px;
+    color: rgb(152, 74, 255); /*cor do titulo*/
+}
+.contato-form p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+/*estilo dos labels*/
+.contato-form label {
+    display: block; /*cada label em linha separada */
+    margin-bottom: 5px; /*espaço entre as linhas*/
+    font-weight: bold;
+}
+
+.contato-form input,
+.contato-form textarea {
+    width: 100%;
+    padding: 10px 5px;
+    margin-bottom: 20px;
+    border: 1px solid;
+    border-radius: 5 px;
+    font-size: 1em;
+}
+.contato-form button {
+    background-color: #b52dff;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.contato-form button:hover {
+    background-color: #b52dff;
+}
+
+footer {
+    background-color: #b52dff;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 14px;
+}
+.hero {
+    position: relative; /*necessario para posicionar o conteudo sobre a iamgem*/
+    width: 100%;
+    height: 50vh; /*ocupa toda ou parcial a altura da tela*/
+    overflow: hidden; /* evita que a imagem ultrapasse a seção*/ 
+}
+/*imagem do banner*/
+.hero-img {
+    width: 100%; /*ocupa toda a largura*/
+    height: 100%; /*ocupa toda a altura da seção*/
+    object-fit: cover; /*corta e ajusta a imagem proporcionalmente*/
+}
+
+/*coluna da imagem*/
+.sobre-imagem img {
+    width: 100%; /*ocupa toda a largura disponivel da coluna*/
+    max-width: 400px; /*limita o tamanho maximo da imagem*/
+    border-radius: 10px; /*bordas redondas*/
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /*sombra leve*/
+}
+.sobre-imagem-melhor{
+    display: flex; /* ativa o flexbox para alinhar colunas lado a lado*/
+    align-items: center; /* alinha verticalmente no centro */
+    justify-content: center; /* espaço entre imagem e texto */ 
+    gap: 40px; /* espaço entre imagem e texto */
+    margin: 50px;
+}
+.sobre-imagem-melhor img {
+    width: 300px; /*ocupa toda a largura disponivel da coluna*/
+    max-width: 400px; /*limita o tamanho maximo da imagem*/
+}
+
+.sobre-imagem-banner img{
+    width: 100%;
+}
+
+.container-sobre2 {
+    background-color: #ffffff;
+    display: flex; /* ativa o flexbox para alinhar colunas lado a lado*/
+    align-items: center; /* alinha verticalmente no centro */
+    justify-content: center; /* espaço entre imagem e texto */ 
+    gap: 40px; /* espaço entre imagem e texto */
+    flex-wrap: wrap; /* faz os elementos quebrarem linha em telas menores (responsivo) */
+}
+
+.container-sobre3 {
+    background-color: #ffffff;
+    display: flex; /* ativa o flexbox para alinhar colunas lado a lado*/
+    align-items: center; /* alinha verticalmente no centro */
+    justify-content: center; /* espaço entre imagem e texto */ 
+    gap: 40px; /* espaço entre imagem e texto */
+    flex-wrap: wrap; /* faz os elementos quebrarem linha em telas menores (responsivo) */
+}
